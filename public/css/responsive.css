@@ -1,0 +1,39 @@
+/* RESPONSIVE */
+
+/* DESCTOP --- MORE THAN 920 PX */
+.mobile-menu-toggle{
+	display: none;
+}
+#reveal-left nav ul li{
+	display: none;
+}
+.reveal{
+	display: none;
+}
+
+@media screen and (max-width: 920px) {	/* LESS THEN 920px  ex. ( ipad portrait ) */
+	nav ul li {
+		display: none;
+	}
+	header h1{
+		font-size:32px;
+		text-align: center;
+		padding:33px 0 22px 0;
+	}
+	#reveal-left nav ul li{
+		display: block;
+	}
+	.mobile-menu-toggle{
+		display: inline-block;
+	}
+	.reveal{
+		display: block;
+	}
+	.hidden{
+		position: absolute;
+		margin-left:00%;
+		width:100%;
+		overflow: hidden;
+		-webkit-filter: blur(3px);
+	}	
+}

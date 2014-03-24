@@ -1,0 +1,212 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	color: #fff;
+	background-color: 	#5ABFFE;
+	background-image: url("../img/bg.jpg");
+	background-size: 100% auto;
+	margin: 0 auto;
+	background-attachment:fixed;
+	-webkit-font-smoothing: antialiased;
+}
+.content{
+	max-width:832px;
+	margin:0 auto;
+
+}
+header{
+
+}
+header h1{
+	text-align: left;
+	color:#fff;
+	font-size:132px;
+	padding:55px 0 44px 0;
+	line-height: 1em;
+}
+header h1 span{
+	color:#EB4F4C;
+}
+h1{
+	padding:30px 0;
+	margin:0;
+}
+h1.xxl{
+	font-size:90px;
+	text-transform: capitalize;
+}
+.mobile-menu-toggle{
+	background: rgba(255,255,255,0.1);
+	border:3px solid #f57b6e;
+	border-color:#444;
+	border-radius: 6px;
+	padding:8px 12px;
+	color:#f57b6e;
+	color:#444;
+	font-size: 18px;
+	position: fixed;
+	top:5px;
+	right:5px;
+	z-index: 99;
+
+}
+nav{
+	width: 100%;
+}
+nav ul{
+	list-style: none;
+	margin:10px 0;
+	padding:0;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;	
+	padding:0;
+	margin:0;
+	height:48px;
+	margin-left:0;
+	margin-right:11px;
+}
+nav ul li:last-child{
+	margin-right:0px;
+	margin-left:-1px;
+}
+nav ul li a{
+	background-color: #eee;
+	text-decoration: none;
+	display: block;
+	margin:0;
+	padding:15px 11px 15px 11px;
+	width:200px;
+	color:#111;
+	font-weight: bold;
+	font-size:12px;
+	-webkit-transition: background 0.25s; /* For Safari 3.1 to 6.0 */
+	-moz-transition: background 0.25s; /* For Safari 3.1 to 6.0 */	
+	transition: background 0.25s;	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
+}
+nav ul li a:not(.active):hover{
+	background: #fff;
+}
+nav ul li a.active{
+	background: #fff;
+
+}
+nav ul li a span{
+	float:right;
+	border-radius: 20px;
+	background-color: #999;
+	padding:10px;
+}
+nav ul li a.active span{
+	background-color: #111;
+}
+#static-content,.winner{
+	height: auto;
+	
+}
+.winner{
+	background-color:#ffc;
+	min-height: 140px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;	
+}
+.main-static{
+	background:#eee;
+	padding:30px;
+	color:#333;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
+
+
+}
+#instalist img{
+	width: 100%;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius: 5px;
+}
+#instalist.grid{
+	padding-top:44px;
+	padding-bottom:44px;
+	margin-bottom:44px;
+}
+.grid span{
+	position: relative;
+	display: none;
+	margin-top:-65px;
+	text-align: center;
+	z-index: 2;
+	color:#fff;
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+	padding:20px 0;
+	font-weight: 300;
+	font-size:12px;
+}
+.bg{
+
+}
+.bg.green{
+	background-color:#3bc492;
+}
+.bg.red{
+	background-color: #f57b6e;
+	background-color:#444;
+}
+.bg.light{
+	background-color:#f6f6f6;
+}
+.reveal{
+	position: fixed;
+	z-index: -1;
+	margin-left:-100%;
+	-webkit-transition: all 0.25s; /* For Safari 3.1 to 6.0 */
+	-moz-transition: all 0.25s; /* For Safari 3.1 to 6.0 */	
+	transition: all 0.25s;		
+	width: 40%;
+	min-width: 200px;in
+	background-color:rgba(255,255,255,0.4);
+	box-shadow:0 0 3px rgba(0,0,0,0.2);
+	height: 100%;
+}
+.reveal nav ul li a{
+	display: block;
+
+}
+.reveal nav ul li a:not(.active){
+	background: none;
+}
+
+.reveal.revealed{
+	z-index: 101;
+	top:0;
+	left:0;
+	margin-left:0;
+	background-color: rgba(255,255,255,0.6);
+}
+.mainapp{
+	-webkit-transition: margin 0.25s; /* For Safari 3.1 to 6.0 */
+	-moz-transition: margin 0.25s; /* For Safari 3.1 to 6.0 */	
+	transition: margin 0.25s;			
+}
+.backclick{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	z-index: 100;
+	display: none;
+}
+.backclick.clickable{
+	display: block;
+}

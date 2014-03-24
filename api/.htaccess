@@ -1,0 +1,23 @@
+
+
+#REWRITE
+
+RewriteEngine On
+RewriteBase /zquick/api/
+#RewriteCond %{HTTP_HOST} !^www.woms.se$ [NC]
+#RewriteRule ^(.*)$ http://www.woms.se/$1 [R=301]
+RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(php|html)\ HTTP
+RewriteRule ^(.*)index\.(php|html)$ /$1 [R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+# GENEREAL PAGE
+
+#show page ?s
+RewriteRule ^([^/\.]+)/?$ ?s=$1 [QSA]
+RewriteRule ^([^/\.]+)/([^/\.]+)?$ ?object=$1&method=$2 [QSA]
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)$ ?object=$1&method=$2&id=$3 [QSA]
+
+
+#ErrorDocument 404 http://www.woms.se/

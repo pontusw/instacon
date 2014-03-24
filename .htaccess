@@ -1,0 +1,29 @@
+<FilesMatch "\.(html|htm|js|css)$">
+FileETag None
+<ifModule mod_headers.c>
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</ifModule>
+</FilesMatch>
+
+#REWRITE
+RewriteEngine On
+RewriteBase /zquick/
+#RewriteCond %{HTTP_HOST} !^www.woms.se$ [NC]
+#RewriteRule ^(.*)$ http://www.woms.se/$1 [R=301]
+RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(php|html)\ HTTP
+RewriteRule ^(.*)index\.(php|html)$ /$1 [R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+# GENEREAL PAGE
+
+#show page ?s
+RewriteRule ^([^/\.]+)/?$ ?s=$1 [L]
+RewriteRule ^([^/\.]+)/([^/\.]+)?$ ?s=$1&subroute=$2 [L]
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)?$ ?s=$1&subroute=$2&id=$3 [L]
+
+#ErrorDocument 404 http://www.woms.se/

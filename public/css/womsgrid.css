@@ -1,0 +1,140 @@
+/* ***** 
+
+	Lightweight GRID BY WOMS
+
+	<h1>EXAMPLE</h1>
+	<div class="grid grid-pad">
+	  <div class="col-1-12">
+	     Main Content
+	  </div>
+	  <div class="col-11-12">
+	     Sidebar
+	  </div>
+	</div>
+
+***** */
+
+/****** MAKE IT FLOAT ******/
+[class*='col-'] {
+  float: left;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.16%;
+}
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.67%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.67%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* MAKE GRID SNAP TO EDGES */
+.grid {
+  padding: 0px;
+  margin:0 -5px 0 -5px;
+}
+.grid > [class*='col-'] {
+  padding: 0px 5px 10px 5px;
+}
+/****** CLEAR TO FIX HIGHT AFTER GRID ******/
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/****** FIX WIDTH MARGINS AND PADDINGS ******/
+[class*='col-']:after, [class*='col-']:before,.grid:after, .grid:before ,* ,*:after,*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[class*='col-'] {
+  padding-right: 5px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0px;
+}
+.col-last:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.clear{
+  clear: both;
+}
+
+/****** PADDING OUTSIDE GRID ******/
+.grid.grid-pad {
+  padding: 5px;
+}
+
+/***** GRID BORDER ********/
+.grid.grid-border [class*='col-'] {
+  box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+
+
+
+/***** DEVICES *****/
+
+/*
+
+	STANDARD STYLING IS DESCTOP WIDER THEN 1024px
+
+*/
+@media screen and (max-width: 768px) {	/* LESS THEN 768px  ex. ( ipad portrait ) */
+	.col-1,.col-2,.col-3,.col-4,.col-5,.col-6{
+		width:50%;
+		margin:auto;
+	}
+	.col-7,.col-8,.col-9,.col-10,.col-11{
+		width:100%;
+	}
+}
+@media screen and (max-width: 480px) {	/* LESS THEN 480px  ex. ( iphone landscape */
+	.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11{
+		width:100%;
+	}
+}
+@media screen and (max-width: 320px) {	/* LESS THEN 320px ex. ( iphone portrait ) */
+	.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11{
+		width:100%;
+	}
+}
+
+
+
+
+
+
+/***** THATS IT *****/
